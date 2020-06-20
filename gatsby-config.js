@@ -20,6 +20,13 @@ module.exports = {
         path: `${__dirname}/data`,
       },
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "content",
+        path: `${__dirname}/content/`,
+      },
+    },
     `gatsby-plugin-sass`,
     `gatsby-transformer-json`,
     `gatsby-transformer-sharp`,
@@ -36,6 +43,7 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-transformer-remark`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

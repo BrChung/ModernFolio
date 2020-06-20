@@ -1,6 +1,7 @@
 //import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState, useEffect, useRef } from "react"
+import { Link } from "gatsby"
 import { CSSTransition } from "react-transition-group"
 import ArrowLeftIcon from "../icons/arrow-left.js"
 import CaretIcon from "../icons/caret.js"
@@ -15,27 +16,32 @@ import "./header.scss"
 
 const Header = ({ siteTitle }) => (
   <header>
-    {/* <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div> */}
     <Navbar>
-      <NavItem icon={<ArrowLeftIcon />}></NavItem>
+      <div
+        style={{
+          margin: `0 auto`,
+          maxWidth: 960,
+          padding: `1.45rem 1.0875rem`,
+        }}
+      >
+        <h1 style={{ margin: 0 }}>
+          <Link
+            to="/"
+            style={{
+              color: `white`,
+              textDecoration: `none`,
+            }}
+          >
+            {siteTitle}
+          </Link>
+        </h1>
+      </div>
+      <div>
+        <span>About</span>
+        <span>Experience</span>
+        <span>Projects</span>
+        <span>Contact</span>
+      </div>
       <NavItem icon={<CaretIcon />}>
         <DropdownMenu></DropdownMenu>
       </NavItem>
@@ -81,7 +87,7 @@ const NavItem = ({ icon, children }) => {
 }
 
 const DropdownMenu = () => {
-  const [activeMenu, setActiveMenu] = useState("main") //settings, social-media
+  const [activeMenu, setActiveMenu] = useState("main") //social-media
   const [menuHeight, setMenuHeight] = useState(null)
   const dropdownRef = useRef(null)
 
@@ -106,6 +112,42 @@ const DropdownMenu = () => {
     </a>
   )
 
+  const DropdownItemDarkMode = ({ leftIcon, children }) => {
+    const [isChecked, setIsChecked] = useState(
+      localStorage.getItem("darkMode") === "true" ? true : false
+    )
+
+    return (
+      <div
+        className="menu-item"
+        onClick={() => {
+          localStorage.setItem("darkMode", !isChecked)
+          const body = document.body
+          !isChecked
+            ? body.classList.replace("light", "dark")
+            : body.classList.replace("dark", "light")
+          setIsChecked(!isChecked)
+        }}
+      >
+        <span className="icon-button">{leftIcon}</span>
+        {children}
+        <div className="icon-right">
+          <label className="switch">
+            <input
+              type="checkbox"
+              onClick={event => {
+                event.stopPropagation()
+              }}
+              checked={isChecked}
+              readOnly
+            />
+            <span className="slider round"></span>
+          </label>
+        </div>
+      </div>
+    )
+  }
+
   const DropdownTitle = ({ leftIcon, children, goToMenu }) => (
     <span className="menu-title">
       <a
@@ -128,40 +170,20 @@ const DropdownMenu = () => {
         onEnter={calcHeight}
       >
         <div className="menu">
+          <DropdownItem leftIcon={<CogIcon />} rightIcon={<ChevronIcon />}>
+            PDF Resume
+          </DropdownItem>
           <DropdownItem
             leftIcon={<UsersIcon />}
             rightIcon={<ChevronIcon />}
             goToMenu="social-media"
           >
-            Connect on Social Media
+            Social Media
           </DropdownItem>
-          <DropdownItem
-            leftIcon={<CogIcon />}
-            rightIcon={<ChevronIcon />}
-            goToMenu="settings"
-          >
-            Settings
-          </DropdownItem>
+          <DropdownItemDarkMode>Dark Mode</DropdownItemDarkMode>
         </div>
       </CSSTransition>
 
-      <CSSTransition
-        in={activeMenu === "settings"}
-        unmountOnExit
-        timeout={500}
-        classNames="menu-secondary"
-        onEnter={calcHeight}
-      >
-        <div className="menu">
-          <DropdownItem goToMenu="main">Back</DropdownItem>
-          <DropdownItem>My Profile</DropdownItem>
-          <DropdownItem>My Profile</DropdownItem>
-          <DropdownItem>My Profile</DropdownItem>
-          <DropdownItem leftIcon={<CogIcon />} rightIcon={<ChevronIcon />}>
-            Settings
-          </DropdownItem>
-        </div>
-      </CSSTransition>
       <CSSTransition
         in={activeMenu === "social-media"}
         unmountOnExit
