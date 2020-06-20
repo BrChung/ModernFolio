@@ -6,3 +6,13 @@
   font-size: 82px;
   line-height: normal;
 }
+
+.landing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 100vh;
+  width: 100%;
+}

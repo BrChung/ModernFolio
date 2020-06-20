@@ -17,34 +17,20 @@ import "./header.scss"
 const Header = ({ siteTitle }) => (
   <header>
     <Navbar>
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `1.45rem 1.0875rem`,
-        }}
-      >
-        <h1 style={{ margin: 0 }}>
-          <Link
-            to="/"
-            style={{
-              color: `white`,
-              textDecoration: `none`,
-            }}
-          >
-            {siteTitle}
-          </Link>
+      <div>
+        <h1>
+          <Link to="/">{siteTitle}</Link>
         </h1>
       </div>
-      <div>
+      <div className="nav-elm-right-container">
         <span>About</span>
         <span>Experience</span>
         <span>Projects</span>
         <span>Contact</span>
+        <NavItem icon={<CaretIcon />}>
+          <DropdownMenu></DropdownMenu>
+        </NavItem>
       </div>
-      <NavItem icon={<CaretIcon />}>
-        <DropdownMenu></DropdownMenu>
-      </NavItem>
     </Navbar>
   </header>
 )
@@ -75,7 +61,6 @@ const NavItem = ({ icon, children }) => {
   }
 
   return (
-    //Prevent button focus on mouse click and allow button to be pressed on space key
     <li className="nav-item" ref={NavItemRef}>
       <button className="icon-button" onClick={() => setOpen(!open)}>
         {icon}
@@ -101,15 +86,14 @@ const DropdownMenu = () => {
   }
 
   const DropdownItem = ({ leftIcon, rightIcon, children, goToMenu }) => (
-    <a
-      href="#"
+    <button
       className="menu-item"
       onClick={() => goToMenu && setActiveMenu(goToMenu)}
     >
       <span className="icon-button">{leftIcon}</span>
       {children}
       <span className="icon-right">{rightIcon}</span>
-    </a>
+    </button>
   )
 
   const DropdownItemDarkMode = ({ leftIcon, children }) => {
@@ -118,7 +102,7 @@ const DropdownMenu = () => {
     )
 
     return (
-      <div
+      <button
         className="menu-item"
         onClick={() => {
           localStorage.setItem("darkMode", !isChecked)
@@ -144,18 +128,18 @@ const DropdownMenu = () => {
             <span className="slider round"></span>
           </label>
         </div>
-      </div>
+      </button>
     )
   }
 
   const DropdownTitle = ({ leftIcon, children, goToMenu }) => (
     <span className="menu-title">
-      <a
+      <button
         className="icon-button-no-background"
         onClick={() => goToMenu && setActiveMenu(goToMenu)}
       >
         {leftIcon}
-      </a>
+      </button>
       <h1>{children}</h1>
     </span>
   )

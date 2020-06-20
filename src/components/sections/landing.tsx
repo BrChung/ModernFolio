@@ -5,7 +5,7 @@ import "./landing.scss"
 const Landing = ({ data }) => {
   const { frontmatter, excerpt } = data[0].node
   return (
-    <div>
+    <div className="landing-container">
       <span className="introduction">{frontmatter.intro}</span>
       <br />
       <span className="title">{frontmatter.title}.</span>

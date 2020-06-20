@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { useEffect, useRef } from "react"
+import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
 
   const htmlElement = document.querySelector("html")
 
-  useEffect(() => {
+  useEffect(handleFirstTab => {
     window.addEventListener("keydown", handleFirstTab)
   }, [])
 
@@ -44,6 +44,11 @@ const Layout = ({ children }) => {
     window.removeEventListener("mousedown", handleMouseDownOnce)
     window.addEventListener("keydown", handleFirstTab)
   }
+
+  const body = document.body
+  localStorage.getItem("darkMode") === "true"
+    ? body.classList.add("dark")
+    : body.classList.add("light")
 
   return (
     <>
