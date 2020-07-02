@@ -6,11 +6,13 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 
 import Landing from "../components/sections/landing"
+import About from "../components/sections/about"
 
 const IndexPage = ({ location, data }) => (
   <Layout>
     <SEO title="Home" />
     <Landing data={data.landing.edges} />
+    <About data={data.about.edges} />
     <h1>Hi peps</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
@@ -32,9 +34,24 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             intro
+            name
             title
           }
           excerpt
+        }
+      }
+    }
+    about: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/about/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            profile_pic
+            skills
+          }
+          html
         }
       }
     }

@@ -10,6 +10,7 @@
 /* <nav> */
 .navbar {
   position: fixed;
+  z-index: 100;
   height: var(--nav-size);
   background-color: var(--bg-accent);
   border-bottom: 1px solid var(--border-color);

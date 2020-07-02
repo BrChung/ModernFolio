@@ -1,15 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
-import HoneycombBG from "../../assets/honeycomb_bg"
 import "./landing.scss"
 
-const Landing = ({ data }) => {
+const Sidebar = ({ data }) => {
   const { frontmatter, excerpt } = data[0].node
   return (
-    <div className="landing-container">
-      <div className="honeycomb-bg">
-        <HoneycombBG></HoneycombBG>
-      </div>
+    <div className="sidebar-container">
       <span className="introduction">{frontmatter.intro}</span>
       <br />
       <span className="title">{frontmatter.name}.</span>
@@ -21,8 +17,8 @@ const Landing = ({ data }) => {
   )
 }
 
-Landing.propTypes = {
+Sidebar.propTypes = {
   data: PropTypes.array.isRequired,
 }
 
-export default Landing
+export default Sidebar

@@ -2,7 +2,8 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text-color);
-  font-family: roboto;
+  font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui,
+    BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
   transition: background 500ms ease-in-out, color 100ms ease-in-out;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -36,7 +37,7 @@ body {
   --bg-accent2: var(--gray3);
   --hover: var(--gray2);
   --text-color: var(--gray1);
-  --border-color: --var(--gray5);
+  --border-color: var(--gray5);
 }
 
 code {
