@@ -97,7 +97,7 @@
 #snackbar {
   visibility: hidden; /* Hidden by default. Visible on click */
   width: 300px;
-  margin-left: -150px; /* Divide value of min-width by 2 */
+  margin-left: -158px; /* Divide value of min-width + padding by 2 */
   background-color: #333; /* Black background color */
   color: #fff; /* White text color */
   text-align: center; /* Centered text */

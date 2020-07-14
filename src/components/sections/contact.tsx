@@ -16,9 +16,9 @@ const Contact = ({ data }) => {
   const formRef = useRef(null)
   const snackbarRef = useRef(null)
   const [errors, setErrors] = useState({ name: "", email: "", message: "" })
-  const [nameError, setNameError] = useState(true)
-  const [emailError, setEmailError] = useState(true)
-  const [messageError, setMessageError] = useState(true)
+  const [nameError, setNameError] = useState(null)
+  const [emailError, setEmailError] = useState(null)
+  const [messageError, setMessageError] = useState(null)
 
   useEffect(() => {
     formRef.current.addEventListener("submit", event => {
@@ -33,9 +33,11 @@ const Contact = ({ data }) => {
         body: new URLSearchParams(formData).toString(),
       }).then(res => {
         if (res) {
-          console.log(res)
           showSnackbar()
           formRef.current.reset()
+          setNameError(null)
+          setEmailError(null)
+          setMessageError(null)
         }
       })
     })
@@ -50,7 +52,7 @@ const Contact = ({ data }) => {
         "show",
         ""
       )
-    }, 5000)
+    }, 500000)
   }
 
   const formHandler = event => {
@@ -149,7 +151,14 @@ const Contact = ({ data }) => {
               <button
                 className="contact-submit-button"
                 type="submit"
-                disabled={nameError || emailError || messageError}
+                disabled={
+                  nameError ||
+                  emailError ||
+                  messageError ||
+                  nameError === null ||
+                  emailError === null ||
+                  messageError === null
+                }
               >
                 {submit_button_text}
               </button>
