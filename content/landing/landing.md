@@ -1,5 +1,5 @@
 ---
-intro: "Hi, I’m"
+intro: "👋 Hello, I’m"
 name: "Brian Chung"
 title: "Software Engineer"
 ---

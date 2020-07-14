@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.scss"
+import SocialMedia from "./social_media"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -22,48 +23,50 @@ const Layout = ({ children }) => {
     }
   `)
 
-  const htmlElement = document.querySelector("html")
-
-  useEffect(handleFirstTab => {
-    window.addEventListener("keydown", handleFirstTab)
-  }, [])
-
   const handleFirstTab = event => {
     if (event.keyCode === 9) {
+      const htmlElement = document.querySelector("html")
       htmlElement.classList.add("user-is-tabbing")
-
       window.removeEventListener("keydown", handleFirstTab)
       window.addEventListener("mousedown", handleMouseDownOnce)
     }
   }
 
   const handleMouseDownOnce = () => {
+    const htmlElement = document.querySelector("html")
     htmlElement.classList.remove("user-is-tabbing")
-
     window.removeEventListener("mousedown", handleMouseDownOnce)
     window.addEventListener("keydown", handleFirstTab)
   }
 
-  const body = document.body
-  localStorage.getItem("darkMode") === "true"
-    ? body.classList.add("dark")
-    : body.classList.add("light")
+  useEffect(() => {
+    window.addEventListener("keydown", handleFirstTab)
+    const body = document.body
+    localStorage.getItem("darkMode") === "true"
+      ? body.classList.add("dark")
+      : body.classList.add("light")
+  })
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title}>Test3</Header>
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+      <Header siteTitle={data.site.siteMetadata.title}></Header>
+      <div className="layout">
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+        <footer className="footer-container">
+          <SocialMedia />
+          <p>
+            <a href="https://github.com/BrChung/personal-website">
+              Developed and Designed by Brian Chung
+            </a>
+          </p>
+          <p>
+            Inspired by{" "}
+            <a href="https://brittanychiang.com/">Brittany Chiang</a>
+          </p>
+          <small>
+            Copyright © {new Date().getFullYear()} Brian Chung. All Rights
+            Reserved.
+          </small>
         </footer>
       </div>
     </>

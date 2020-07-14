@@ -1,0 +1,164 @@
+.contact-flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  min-height: 90vh;
+  width: 100%;
+  @include media("<tablet") {
+    padding-top: 42px;
+  }
+}
+
+.contact-container {
+  position: relative;
+  max-width: 700px;
+}
+
+.contact-container-title {
+  font-size: 32px;
+  line-height: 1.6;
+}
+
+.contact-content-container {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  flex-direction: column;
+  @include media("<tablet") {
+    align-items: center;
+  }
+  input,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    margin-right: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    margin-top: 2px;
+  }
+  textarea {
+    height: 150px;
+  }
+  label {
+    color: var(--text-light);
+    padding: 12px 0 12px 0;
+    display: inline-block;
+    width: 400px;
+    @include media("<tablet") {
+      width: calc(100% - 24px);
+    }
+  }
+}
+
+.contact-text-content {
+  width: 400px;
+  color: var(--text-light);
+  @include media("<tablet") {
+    width: 100%;
+  }
+}
+
+.contact-submit-button {
+  @include button-reset;
+  background-color: var(--text-accent);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  margin-right: -24px;
+  @include media("<tablet") {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.contact-submit-button:hover {
+  filter: brightness(0.9);
+}
+
+.contact-submit-button:disabled {
+  background-color: #cccccc;
+  filter: brightness(1);
+  cursor: auto;
+}
+
+.contact-form-error {
+  color: var(--error);
+  float: right;
+  margin-right: -24px;
+}
+
+//https://www.w3schools.com/howto/howto_js_snackbar.asp
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  width: 300px;
+  margin-left: -150px; /* Divide value of min-width by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  left: 50%;
+  z-index: 1; /* Add a z-index if needed */
+  bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 4.5s;
+  animation: fadein 0.5s, fadeout 0.5s 4.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}

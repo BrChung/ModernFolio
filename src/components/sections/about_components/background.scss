@@ -1,0 +1,23 @@
+.background-container {
+  grid-area: aboutme;
+  display: inline-block;
+  position: relative;
+  margin-top: 30px;
+  border-radius: 6px;
+  background-color: var(--text-color);
+  p {
+    color: var(--bg);
+  }
+}
+
+.background-content-container {
+  padding: 15px 30px;
+}
+
+.background-profile-image {
+  position: relative;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: -30px;
+  border-radius: 6px;
+}

@@ -1,0 +1,30 @@
+.proficiency-rating-container {
+  display: inline-block;
+  unicode-bidi: bidi-override;
+  font-size: 25px;
+  height: 25px;
+  width: auto;
+  margin: 0;
+  position: relative;
+  padding: 0;
+  user-select: none;
+}
+
+.proficiency-rating-upper {
+  padding: 0;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  span {
+    color: #c52b2f;
+  }
+}
+
+.proficiency-rating-lower {
+  padding: 0;
+  display: flex;
+  z-index: 0;
+}

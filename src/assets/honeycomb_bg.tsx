@@ -3,8 +3,6 @@ import anime from "animejs"
 import "./honeycomb_bg.scss"
 
 const HoneycombBG = () => {
-  const drawItem = useRef(null)
-
   useEffect(() => {
     anime({
       targets: ".st1",
@@ -29,7 +27,7 @@ const HoneycombBG = () => {
       xmlnsXlink="http://www.w3.org/1999/xlink"
       x="0px"
       y="0px"
-      viewBox="0 0 799 501"
+      viewBox="0 0 775 501"
     >
       <g id="CenterRight">
         <polygon

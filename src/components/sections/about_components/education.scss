@@ -1,0 +1,67 @@
+.education-container {
+  grid-area: education;
+  display: inline-block;
+  position: relative;
+  border-radius: 6px;
+  padding: 15px 30px;
+  background-color: var(--dark-accent);
+  svg {
+    fill: #ffffff;
+    height: 24px;
+    width: 24px;
+    margin-right: 22px;
+    margin-left: 8px;
+  }
+}
+
+.education-title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  span {
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 5px;
+    margin-top: 0px;
+  }
+}
+
+.education-school-image {
+  margin-right: 12px;
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+}
+
+.education-content-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.education-list-item {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: row;
+}
+
+.education-school-name {
+  font-size: 16px;
+}
+
+.education-degree-major {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.education-date-range {
+  font-size: 14px;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.education-school-content {
+  h5 {
+    margin: 0;
+  }
+}

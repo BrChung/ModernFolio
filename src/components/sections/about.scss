@@ -1,8 +1,56 @@
 .about-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  align-items: flex-start;
+  padding-top: 10px;
+  @include media("<tablet") {
+    padding-top: 36px;
+  }
+}
+
+.about-container-title {
+  font-size: 32px;
+  line-height: 4;
+}
+
+.about-content-container {
+  position: relative;
   width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 30px 30px;
+  grid-template-areas:
+    "aboutme certification technology"
+    "aboutme languages technology"
+    "aboutme languages interests"
+    "education languages interests"
+    ". . interests";
+  @include media(">tablet", "<=desktop") {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "aboutme languages"
+      "aboutme technology"
+      "education technology"
+      "certification interests"
+      ". interests"
+      ". interests";
+  }
+  @include media(">phone", "<=tablet") {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "aboutme"
+      "education"
+      "certification"
+      "languages"
+      "technology"
+      "interests";
+  }
+  @include media("<=phone") {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "aboutme"
+      "education"
+      "certification"
+      "languages"
+      "technology"
+      "interests";
+  }
 }

@@ -1,7 +1,6 @@
-//import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState, useEffect, useRef } from "react"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import { CSSTransition } from "react-transition-group"
 import ArrowLeftIcon from "../icons/arrow-left.js"
 import CaretIcon from "../icons/caret.js"
@@ -23,10 +22,18 @@ const Header = ({ siteTitle }) => (
         </h1>
       </div>
       <div className="nav-elm-right-container">
-        <span>About</span>
-        <span>Experience</span>
-        <span>Projects</span>
-        <span>Contact</span>
+        <li>
+          <a href="/#about">About</a>
+        </li>
+        <li>
+          <a href="/#experience">Experience</a>
+        </li>
+        <li>
+          <a href="/#projects">Projects</a>
+        </li>
+        <li>
+          <a href="/#contact">Contact</a>
+        </li>
         <NavItem icon={<CaretIcon />}>
           <DropdownMenu></DropdownMenu>
         </NavItem>
@@ -61,17 +68,44 @@ const NavItem = ({ icon, children }) => {
   }
 
   return (
-    <li className="nav-item" ref={NavItemRef}>
-      <button className="icon-button" onClick={() => setOpen(!open)}>
+    <div className="nav-item" ref={NavItemRef}>
+      <button
+        className={open ? "icon-button-active" : "icon-button"}
+        onClick={() => setOpen(!open)}
+      >
         {icon}
       </button>
 
       {open && children}
-    </li>
+    </div>
   )
 }
 
 const DropdownMenu = () => {
+  const data = useStaticQuery(graphql`
+    query SocialMediaHeaderQuery {
+      allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/social_media/" } }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              github
+              linkedin
+              instagram
+              twitter
+            }
+          }
+        }
+      }
+    }
+  `)
+  const {
+    github,
+    instagram,
+    linkedin,
+    twitter,
+  } = data.allMarkdownRemark.edges[0].node.frontmatter
   const [activeMenu, setActiveMenu] = useState("main") //social-media
   const [menuHeight, setMenuHeight] = useState(null)
   const dropdownRef = useRef(null)
@@ -179,10 +213,18 @@ const DropdownMenu = () => {
           <DropdownTitle leftIcon={<ArrowLeftIcon />} goToMenu="main">
             Social Media
           </DropdownTitle>
-          <DropdownItem leftIcon={<GitHubIcon />}>GitHub</DropdownItem>
-          <DropdownItem leftIcon={<LinkedInIcon />}>LinkedIn</DropdownItem>
-          <DropdownItem leftIcon={<InstagramIcon />}>Instagram</DropdownItem>
-          <DropdownItem leftIcon={<TwitterIcon />}>Twitter</DropdownItem>
+          <a href={github}>
+            <DropdownItem leftIcon={<GitHubIcon />}> GitHub</DropdownItem>
+          </a>
+          <a href={linkedin}>
+            <DropdownItem leftIcon={<LinkedInIcon />}>LinkedIn</DropdownItem>
+          </a>
+          <a href={instagram}>
+            <DropdownItem leftIcon={<InstagramIcon />}>Instagram</DropdownItem>
+          </a>
+          <a href={twitter}>
+            <DropdownItem leftIcon={<TwitterIcon />}>Twitter</DropdownItem>
+          </a>
         </div>
       </CSSTransition>
     </div>

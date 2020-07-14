@@ -1,0 +1,62 @@
+.interests-container {
+  grid-area: interests;
+  display: inline-block;
+  position: relative;
+  margin-top: 30px;
+  border-radius: 6px;
+  background-color: var(--text-color);
+  p {
+    color: var(--bg);
+  }
+  h4 {
+    color: var(--bg);
+  }
+  h5 {
+    color: var(--bg);
+  }
+}
+
+.interests-content-container {
+  padding: 15px 30px;
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 10px;
+      color: var(--bg);
+      &:before {
+        content: "▶";
+        position: absolute;
+        left: 0;
+        color: var(--bg);
+      }
+      &:last-of-type {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+.interests-cover-image {
+  position: relative;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: -30px;
+  border-radius: 6px;
+}
+
+.interests-image-caption {
+  padding: 0 30px;
+  margin: 0;
+  font-size: x-small;
+  overflow-wrap: normal;
+}
+
+.interests-title {
+  padding: 0 30px;
+  margin-top: 24px;
+  margin-bottom: 0;
+}

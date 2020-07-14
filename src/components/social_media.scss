@@ -1,0 +1,16 @@
+.social-media-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  svg {
+    fill: var(--text-light);
+    width: 32px;
+    height: 32px;
+    padding: 12px;
+    transition: transform var(--speed) ease-out;
+  }
+  svg:hover {
+    fill: var(--text-accent);
+    transform: translate(0, -5px);
+  }
+}

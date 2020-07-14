@@ -6,18 +6,26 @@ import "./landing.scss"
 const Landing = ({ data }) => {
   const { frontmatter, excerpt } = data[0].node
   return (
-    <div className="landing-container">
+    <section className="landing-container">
       <div className="honeycomb-bg">
         <HoneycombBG></HoneycombBG>
       </div>
-      <span className="introduction">{frontmatter.intro}</span>
-      <br />
-      <span className="title">{frontmatter.name}.</span>
-      <br />
-      <span className="title">{frontmatter.title}</span>
-      <br />
-      <span className="description">{excerpt}</span>
-    </div>
+      <div className="landing-content-container">
+        <div className="landing-content-flex">
+          <span className="landing-introduction">{frontmatter.intro}</span>
+          <br />
+          <h1>
+            <span className="landing-title">{frontmatter.name}.</span>
+          </h1>
+          <br />
+          <h2>
+            <span className="landing-position">{frontmatter.title}</span>
+          </h2>
+          <br />
+          <span className="landing-description">{excerpt}</span>
+        </div>
+      </div>
+    </section>
   )
 }
 

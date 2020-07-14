@@ -1,0 +1,68 @@
+.certification-container {
+  grid-area: certification;
+  display: inline-block;
+  position: relative;
+  border-radius: 6px;
+  padding: 15px 30px;
+  background-color: var(--dark-accent);
+  svg {
+    fill: #ffffff;
+    height: 24px;
+    width: 24px;
+    margin-right: 22px;
+    margin-left: 8px;
+  }
+}
+
+.certification-title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  span {
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 5px;
+    margin-top: 0px;
+  }
+}
+
+.certification-certificate-image {
+  margin-right: 12px;
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+}
+
+.certification-content-container {
+  display: flex;
+  flex-direction: column;
+  @include styled-link-subtitle;
+}
+
+.certification-list-item {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: row;
+}
+
+.certification-certificate-name {
+  font-size: 16px;
+}
+
+.certification-issuer {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.certification-date-range {
+  font-size: 14px;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.certification-certificate-content {
+  h5 {
+    margin: 0;
+  }
+}

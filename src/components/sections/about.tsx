@@ -1,29 +1,38 @@
 import React from "react"
 import PropTypes from "prop-types"
-import ProfileImage from "../../assets/profile_image"
-import Image from "../../components/image"
+import About_Background from "./about_components/background"
+import About_Education from "./about_components/education"
+import About_Languages from "./about_components/languages"
+import About_Technologies from "./about_components/technologies"
+import About_Certification from "./about_components/certification"
 import "./about.scss"
+import About_Interests from "./about_components/interests"
 
-const About = ({ data }) => {
-  const { frontmatter, html } = data[0].node
+const About = ({
+  about,
+  education,
+  languages,
+  technologies,
+  certifications,
+  interests,
+}) => {
   return (
-    <div>
-      <div className="about-container">
-        <span className="introduction">{frontmatter.intro}</span>
-        <br />
-        <span className="title">{frontmatter.title}</span>
-        <br />
-        <div dangerouslySetInnerHTML={{ __html: html }}></div>
+    <section id="about" className="about-container">
+      <h3 className="about-container-title">About Me</h3>
+      <div className="about-content-container">
+        <About_Background data={about} />
+        <About_Education data={education} />
+        <About_Languages data={languages} />
+        <About_Technologies data={technologies} />
+        <About_Certification data={certifications} />
+        <About_Interests data={interests} />
       </div>
-      <div style={{ maxWidth: `512px`, marginBottom: `1.45rem` }}>
-        <ProfileImage />
-      </div>
-    </div>
+    </section>
   )
 }
 
 About.propTypes = {
-  data: PropTypes.array.isRequired,
+  about: PropTypes.array.isRequired,
 }
 
 export default About
