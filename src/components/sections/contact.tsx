@@ -52,7 +52,7 @@ const Contact = ({ data }) => {
         "show",
         ""
       )
-    }, 500000)
+    }, 5000)
   }
 
   const formHandler = event => {
