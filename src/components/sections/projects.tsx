@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import Img from "gatsby-image"
-import GitHubIcon from "../../icons/github"
+import CodeIcon from "../../icons/code"
+import ExitToAppIcon from "../../icons/exit_to_app"
 import "./projects.scss"
 
 const Projects = ({ data }) => {
@@ -66,21 +67,25 @@ const Projects = ({ data }) => {
                     {github && (
                       <a
                         href={github}
+                        className="project-code-button"
                         target="_blank"
                         rel="nofollow noopener noreferrer"
                         aria-label="GitHub Link"
                       >
-                        <GitHubIcon />
+                        <CodeIcon />
+                        Code
                       </a>
                     )}
                     {demo && (
                       <a
                         href={demo}
+                        className="project-demo-button"
                         target="_blank"
                         rel="nofollow noopener noreferrer"
                         aria-label="Demo Link"
                       >
-                        <GitHubIcon />
+                        <ExitToAppIcon />
+                        Demo
                       </a>
                     )}
                   </div>

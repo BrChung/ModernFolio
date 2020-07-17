@@ -34,7 +34,7 @@
 
 .landing-position {
   font-size: 62px;
-  line-height: normal;
+  line-height: 0.3;
   color: var(--text-light);
   @include media(">tablet", "<=desktop") {
     @include background-overlay;

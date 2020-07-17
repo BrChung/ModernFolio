@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Img from "gatsby-image"
+import BeachAccessIcon from "../../../icons/beach_access"
 import "./interests.scss"
 
 const About_Interests = ({ data }) => {
@@ -14,7 +15,10 @@ const About_Interests = ({ data }) => {
         alt={cover_image_alt}
       />
       <p className="interests-image-caption">{cover_image_caption}</p>
-      <h4 className="interests-title">My Interests</h4>
+      <h4 className="interests-title">
+        <BeachAccessIcon />
+        <span>My Interests</span>
+      </h4>
       <div
         className="interests-content-container"
         dangerouslySetInnerHTML={{ __html: html }}

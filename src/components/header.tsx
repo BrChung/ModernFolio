@@ -2,10 +2,10 @@ import PropTypes from "prop-types"
 import React, { useState, useEffect, useRef } from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import { CSSTransition } from "react-transition-group"
-import ArrowLeftIcon from "../icons/arrow-left.js"
-import CaretIcon from "../icons/caret.js"
-import CogIcon from "../icons/cog.js"
-import ChevronIcon from "../icons/chevron.js"
+import ArrowLeftIcon from "../icons/arrow-left"
+import CaretIcon from "../icons/caret"
+import CogIcon from "../icons/cog"
+import ChevronIcon from "../icons/chevron"
 import UsersIcon from "../icons/users"
 import GitHubIcon from "../icons/github"
 import LinkedInIcon from "../icons/linkedin"
@@ -60,8 +60,7 @@ const NavItem = ({ icon, children }) => {
   }, [])
 
   const handleClickOutside = event => {
-    const domNode = NavItemRef.current
-
+    const domNode: any = NavItemRef.current
     if (!domNode || !domNode.contains(event.target)) {
       setOpen(false)
     }
@@ -119,7 +118,12 @@ const DropdownMenu = () => {
     setMenuHeight(height)
   }
 
-  const DropdownItem = ({ leftIcon, rightIcon, children, goToMenu }) => (
+  const DropdownItem = ({
+    leftIcon,
+    rightIcon = undefined,
+    children,
+    goToMenu = undefined,
+  }) => (
     <button
       className="menu-item"
       onClick={() => goToMenu && setActiveMenu(goToMenu)}
@@ -130,7 +134,7 @@ const DropdownMenu = () => {
     </button>
   )
 
-  const DropdownItemDarkMode = ({ leftIcon, children }) => {
+  const DropdownItemDarkMode = ({ leftIcon = undefined, children }) => {
     const [isChecked, setIsChecked] = useState(
       localStorage.getItem("darkMode") === "true" ? true : false
     )
@@ -139,7 +143,7 @@ const DropdownMenu = () => {
       <button
         className="menu-item"
         onClick={() => {
-          localStorage.setItem("darkMode", !isChecked)
+          localStorage.setItem("darkMode", (!isChecked).toString())
           const body = document.body
           !isChecked
             ? body.classList.replace("light", "dark")

@@ -191,3 +191,40 @@
   position: absolute;
   top: 0;
 }
+
+.project-code-button {
+  display: flex;
+  justify-content: center;
+  background-color: var(--dark-accent);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  margin: 0 6px;
+  cursor: pointer;
+  svg {
+    fill: white;
+    margin-right: 6px;
+  }
+}
+
+.project-demo-button {
+  display: flex;
+  justify-content: center;
+  background-color: var(--text-accent);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  margin: 0 6px;
+  cursor: pointer;
+  svg {
+    fill: white;
+    margin-right: 6px;
+  }
+}
+
+.project-code-button:hover,
+.project-demo-button:hover {
+  filter: brightness(0.9);
+}
