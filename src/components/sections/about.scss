@@ -1,13 +1,10 @@
 .about-container {
-  padding-top: 10px;
-  @include media("<tablet") {
-    padding-top: 36px;
-  }
+  padding-top: 1px;
 }
 
 .about-container-title {
   font-size: 32px;
-  line-height: 4;
+  line-height: 1.6;
 }
 
 .about-content-container {

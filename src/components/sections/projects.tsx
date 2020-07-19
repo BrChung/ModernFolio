@@ -19,7 +19,7 @@ const Projects = ({ data }) => {
 
   return (
     <section className="projects-container" id="projects">
-      <h3 className="projects-container-title">Projects I've Developed</h3>
+      <h3 className="projects-container-title">Stuff I've Made</h3>
       <div>
         {data &&
           data.map(({ node }, i) => {

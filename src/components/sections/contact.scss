@@ -6,7 +6,8 @@
   min-height: 90vh;
   width: 100%;
   @include media("<tablet") {
-    padding-top: 42px;
+    align-items: flex-start;
+    margin-top: 54px;
   }
 }
 

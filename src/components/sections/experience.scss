@@ -5,6 +5,10 @@
   flex-direction: row;
   min-height: 100vh;
   width: 100%;
+  @include media("<tablet") {
+    align-items: flex-start;
+    margin-top: 54px;
+  }
 }
 
 .experience-container {
@@ -116,13 +120,17 @@
   height: 450px;
   padding-left: 30px;
   overflow-y: scroll;
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
-  scrollbar-width: none; /* Firefox */
   @include styled-link-title;
+  @include media(">=tablet") {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+  }
 }
 
 .experience-tab-content-container::-webkit-scrollbar {
-  display: none;
+  @include media(">=tablet") {
+    display: none;
+  }
 }
 
 .experience-tab-content-container:focus {

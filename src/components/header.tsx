@@ -43,7 +43,7 @@ const Header = ({ siteTitle }) => (
 )
 
 const Navbar = ({ children }) => (
-  <nav className="navbar">
+  <nav id="navbar">
     <ul className="navbar-elm"> {children}</ul>
   </nav>
 )
