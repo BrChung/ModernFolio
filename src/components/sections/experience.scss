@@ -116,14 +116,22 @@
 
 .experience-tab-content-container {
   position: relative;
-  width: 90%;
-  height: 450px;
-  padding-left: 30px;
+  width: calc(100% - 48px);
+  padding: 30px;
+  margin-left: 12px;
   overflow-y: scroll;
+  background-color: var(--card-color);
+  border-radius: 6px;
+  box-shadow: var(--box-shadow);
+  transition: height var(--speed);
   @include styled-link-title;
   @include media(">=tablet") {
     -ms-overflow-style: none; /* Internet Explorer 10+ */
     scrollbar-width: none; /* Firefox */
+  }
+  @include media("<tablet") {
+    margin: 0;
+    padding: 30px 24px;
   }
 }
 
@@ -163,15 +171,12 @@
     li {
       position: relative;
       padding-left: 30px;
-      margin-bottom: 10px;
+      padding-bottom: 10px;
       &:before {
         content: "▶";
         position: absolute;
         left: 0;
         color: var(--text-accent);
-      }
-      &:last-of-type {
-        margin-bottom: 30px;
       }
     }
   }

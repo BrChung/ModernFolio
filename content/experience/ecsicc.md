@@ -9,6 +9,8 @@ url: "https://asi.fullerton.edu/"
 - Hosted Night with Industry, an on-campus networking event, recognized at Tuffy Awards 2020 as Outstanding Program in Academia
 - Faciliated discussions on the allocation of budget for all engineering and computer science organizations and projects
 
+<br>
+
 <h4 class="experience-title">
     <span>Director of Finance</span>
     <span class="experience-company">&nbsp;@&nbsp;</span>

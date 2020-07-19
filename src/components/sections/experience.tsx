@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react"
+import { CSSTransition } from "react-transition-group"
 import PropTypes from "prop-types"
 import "./experience.scss"
 
@@ -6,7 +7,9 @@ const Experience = ({ data }) => {
   const [activeExpId, setActiveExpId] = useState(0)
   const [expFocus, setExpFocus] = useState(null)
   const [windowWidth, setWindowWidth] = useState(null)
+  const [contentHeight, setContentHeight] = useState(null)
   const expTabs = useRef([])
+  const expContent = useRef([])
 
   const focusExp = () => {
     if (expTabs.current[expFocus]) expTabs.current[expFocus].focus()
@@ -28,11 +31,17 @@ const Experience = ({ data }) => {
     }
   }
 
+  const calcHeight = element => {
+    const height = element.offsetHeight
+    setContentHeight(height)
+  }
+
   useEffect(() => focusExp(), [expFocus])
 
   useEffect(() => {
     window.addEventListener("resize", updateWindowSize)
     updateWindowSize()
+    setContentHeight(expContent.current[0]?.firstChild.offsetHeight)
   }, [])
 
   return (
@@ -91,32 +100,45 @@ const Experience = ({ data }) => {
               return (
                 <div
                   className="experience-tab-content-container"
-                  key={i}
                   id={`panel-${i}`}
                   role="tabpanel"
                   aria-labelledby={`tab-${i}`}
                   tabIndex={activeExpId === i ? 0 : -1}
                   hidden={activeExpId !== i}
+                  ref={el => (expContent.current[i] = el)}
+                  style={{ height: contentHeight }}
+                  key={i}
                 >
-                  <h4 className="experience-title">
-                    <span>{title}</span>
-                    <span className="experience-company">&nbsp;@&nbsp;</span>
-                    <a
-                      href={url}
-                      target="_blank"
-                      rel="nofollow noopener noreferrer"
-                      className="experience-company"
-                    >
-                      {company}
-                    </a>
-                  </h4>
-                  <h5>
-                    <span className="experience-details">{range}</span>
-                  </h5>
-                  <div
-                    className="experience-description"
-                    dangerouslySetInnerHTML={{ __html: html }}
-                  />
+                  <CSSTransition
+                    in={activeExpId === i}
+                    unmountOnExit
+                    timeout={500}
+                    onEnter={calcHeight}
+                  >
+                    <div>
+                      <h4 className="experience-title">
+                        <span>{title}</span>
+                        <span className="experience-company">
+                          &nbsp;@&nbsp;
+                        </span>
+                        <a
+                          href={url}
+                          target="_blank"
+                          rel="nofollow noopener noreferrer"
+                          className="experience-company"
+                        >
+                          {company}
+                        </a>
+                      </h4>
+                      <h5>
+                        <span className="experience-details">{range}</span>
+                      </h5>
+                      <div
+                        className="experience-description"
+                        dangerouslySetInnerHTML={{ __html: html }}
+                      />
+                    </div>
+                  </CSSTransition>
                 </div>
               )
             })}
