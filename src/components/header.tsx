@@ -4,13 +4,14 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import { CSSTransition } from "react-transition-group"
 import ArrowLeftIcon from "../icons/arrow-left"
 import CaretIcon from "../icons/caret"
-import CogIcon from "../icons/cog"
 import ChevronIcon from "../icons/chevron"
 import UsersIcon from "../icons/users"
 import GitHubIcon from "../icons/github"
 import LinkedInIcon from "../icons/linkedin"
 import InstagramIcon from "../icons/instagram"
 import TwitterIcon from "../icons/twitter"
+import PictureAsPDFIcon from "../icons/picrture_as_pdf"
+import Brightness2Icon from "../icons/brightness_2"
 import "./header.scss"
 
 const Header = ({ siteTitle }) => (
@@ -192,9 +193,7 @@ const DropdownMenu = () => {
         onEnter={calcHeight}
       >
         <div className="menu">
-          <DropdownItem leftIcon={<CogIcon />} rightIcon={<ChevronIcon />}>
-            PDF Resume
-          </DropdownItem>
+          <DropdownItem leftIcon={<PictureAsPDFIcon />}>Resume</DropdownItem>
           <DropdownItem
             leftIcon={<UsersIcon />}
             rightIcon={<ChevronIcon />}
@@ -202,7 +201,9 @@ const DropdownMenu = () => {
           >
             Social Media
           </DropdownItem>
-          <DropdownItemDarkMode>Dark Mode</DropdownItemDarkMode>
+          <DropdownItemDarkMode leftIcon={<Brightness2Icon />}>
+            Dark Mode
+          </DropdownItemDarkMode>
         </div>
       </CSSTransition>
 
