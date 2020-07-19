@@ -3,10 +3,11 @@
   display: inline-block;
   position: relative;
   border-radius: 6px;
-  background-color: var(--dark-shade2);
-  padding: 15px 30px;
+  background-color: var(--card-color);
+  padding: 15px 30px 30px 30px;
+  box-shadow: var(--box-shadow);
   svg {
-    fill: #ffffff;
+    fill: var(--text-color);
     height: 24px;
     width: 24px;
     margin-right: 22px;
@@ -21,7 +22,6 @@
   align-items: center;
   justify-content: flex-start;
   span {
-    color: #ffffff;
     font-size: 24px;
   }
 }

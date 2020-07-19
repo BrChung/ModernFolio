@@ -71,6 +71,8 @@
   cursor: pointer;
   float: right;
   margin-right: -24px;
+  box-shadow: var(--box-shadow-low);
+  transition: all 100ms;
   @include media("<tablet") {
     width: 100%;
     margin-right: 0;
@@ -78,12 +80,14 @@
 }
 
 .contact-submit-button:hover {
-  filter: brightness(0.9);
+  filter: var(--brightness-inverse-filter);
+  box-shadow: var(--box-shadow);
 }
 
 .contact-submit-button:disabled {
   background-color: #cccccc;
   filter: brightness(1);
+  box-shadow: var(--box-shadow-low);
   cursor: auto;
 }
 

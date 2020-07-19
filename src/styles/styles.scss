@@ -80,9 +80,9 @@ body {
 :root {
   //Color Pallete
   --light-shade0: #cecece;
-  --light: #f4f0f2;
-  --light-op: rgba(244, 240, 242, 0.8);
-  --light-shade1: #eee8eb;
+  --light: #eee8eb;
+  --light-op: #eee8ebd0;
+  --light-shade1: #dfdfdf;
   --light-shade2: #f4f0f2;
   --light-accent0: #bea6b2;
   --light-accent: #63acc1;
@@ -92,12 +92,15 @@ body {
   --dark-shade0: #34363f;
   --dark-shade1: #25262d;
   --dark: #1a1b20;
-  --dark-op: rgba(26, 27, 32, 0.8);
+  --dark-op: #1a1b20d0;
   --dark-shade2: #151618;
   --nav-size: 60px;
-  --border-radius: 8px;
+  --border-radius: 6px;
   --speed: 500ms;
   --error: #c52b2f;
+  --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  --box-shadow-low: 0 2px 6px 0 rgba(0, 0, 0, 0.2),
+    0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
 .light {
@@ -111,6 +114,10 @@ body {
   --text-accent: var(--main-shade1);
   --text-light: var(--dark-shade0);
   --border-color: var(--light-shade0);
+  --card-color: var(--light-shade2);
+  --card-inverse-color: var(--dark-shade0);
+  --brightness-filter: brightness(0.9);
+  --brightness-inverse-filter: brightness(1.1);
 }
 
 .dark {
@@ -124,6 +131,10 @@ body {
   --text-accent: var(--light-accent0);
   --text-light: var(--light-shade0);
   --border-color: var(--dark-shade1);
+  --card-color: var(--dark-shade1);
+  --card-inverse-color: var(--light-shade2);
+  --brightness-filter: brightness(1.1);
+  --brightness-inverse-filter: brightness(0.9);
 }
 
 code {

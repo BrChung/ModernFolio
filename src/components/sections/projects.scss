@@ -32,7 +32,6 @@
       justify-content: flex-end;
       z-index: 1;
       li {
-        // margin-left: ${theme.margin};
         margin-right: 0;
       }
     }
@@ -73,8 +72,9 @@
   position: relative;
   z-index: 2;
   padding: 25px;
-  background-color: var(--dark-shade1);
+  background-color: var(--card-color);
   border-radius: 6px;
+  box-shadow: var(--box-shadow);
   @include media("<tablet") {
     background-color: transparent;
     padding: 20px 0;
@@ -114,7 +114,6 @@
   position: relative;
   margin-top: 10px;
   margin-left: -10px;
-  // color: ${colors.lightestSlate};
   a {
     padding: 10px;
     svg {
@@ -125,14 +124,12 @@
 }
 
 .project-image-container {
-  // ${mixins.boxShadow};
   grid-column: 6 / -1;
   grid-row: 1 / -1;
   position: relative;
   z-index: 1;
-  // background-color: ${colors.green};
-  // border-radius: ${theme.radius + 1}px;
-  // transition: ${theme.transition};
+  box-shadow: var(--box-shadow);
+  background-color: var(--light-accent);
   @include media("<tablet") {
     height: 100%;
     grid-column: 1 / -1;
@@ -157,8 +154,6 @@
     right: 0;
     bottom: 0;
     z-index: 3;
-    //   transition: ${theme.transition};
-    //   background-color: ${colors.navy};
     mix-blend-mode: screen;
   }
 }
@@ -171,6 +166,7 @@
   position: relative;
   mix-blend-mode: multiply;
   filter: grayscale(100%) contrast(1) brightness(90%);
+  transition: all 100ms;
   @include media("<tablet") {
     object-fit: cover;
     width: auto;
@@ -197,6 +193,8 @@
   border: none;
   border-radius: 4px;
   margin: 0 6px;
+  box-shadow: var(--box-shadow-low);
+  transition: all 100ms;
   cursor: pointer;
   svg {
     fill: white;
@@ -213,6 +211,8 @@
   border: none;
   border-radius: 4px;
   margin: 0 6px;
+  box-shadow: var(--box-shadow-low);
+  transition: all 100ms;
   cursor: pointer;
   svg {
     fill: white;
@@ -222,5 +222,6 @@
 
 .project-code-button:hover,
 .project-demo-button:hover {
-  filter: brightness(0.9);
+  filter: var(--brightness-inverse-filter);
+  box-shadow: var(--box-shadow);
 }

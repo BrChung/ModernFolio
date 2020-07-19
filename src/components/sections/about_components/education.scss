@@ -5,6 +5,7 @@
   border-radius: 6px;
   padding: 15px 30px;
   background-color: var(--dark-accent);
+  box-shadow: var(--box-shadow);
   svg {
     fill: #ffffff;
     height: 24px;
@@ -46,11 +47,15 @@
 
 .education-school-name {
   font-size: 16px;
+  span {
+    color: var(--light);
+  }
 }
 
 .education-degree-major {
   font-size: 14px;
   font-weight: normal;
+  color: var(--light);
 }
 
 .education-date-range {

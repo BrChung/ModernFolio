@@ -4,7 +4,8 @@
   position: relative;
   margin-top: 30px;
   border-radius: 6px;
-  background-color: var(--text-color);
+  background-color: var(--card-inverse-color);
+  box-shadow: var(--box-shadow);
   p {
     color: var(--bg);
   }

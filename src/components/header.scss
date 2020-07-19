@@ -6,7 +6,7 @@
   background-color: var(--bg);
   top: 0px;
   width: 100%;
-  box-shadow: 3px 3px 5px 6px var(--bg-accent);
+  box-shadow: var(--box-shadow);
   @include media("<tablet") {
     height: calc(var(--nav-size) * 1.7);
   }
@@ -120,7 +120,7 @@
 }
 
 .icon-button:hover {
-  filter: brightness(1.2);
+  filter: var(--brightness-filter);
 }
 
 .icon-button-no-background:hover {
@@ -155,6 +155,7 @@
   padding: 10px 0;
   overflow: hidden;
   transition: height var(--speed) ease;
+  box-shadow: var(--box-shadow);
 }
 
 .menu {
@@ -255,7 +256,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: var(--light-shade1);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
