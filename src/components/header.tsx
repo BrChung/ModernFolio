@@ -23,16 +23,16 @@ const Header = ({ siteTitle }) => (
       </div>
       <div className="nav-elm-right-container">
         <li>
-          <a href="/#about">About</a>
+          <Link to="/#about">About</Link>
         </li>
         <li>
-          <a href="/#experience">Experience</a>
+          <Link to="/#experience">Experience</Link>
         </li>
         <li>
-          <a href="/#projects">Projects</a>
+          <Link to="/#projects">Projects</Link>
         </li>
         <li>
-          <a href="/#contact">Contact</a>
+          <Link to="/#contact">Contact</Link>
         </li>
         <NavItem icon={<CaretIcon />}>
           <DropdownMenu></DropdownMenu>
