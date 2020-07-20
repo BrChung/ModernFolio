@@ -133,6 +133,7 @@
   z-index: 1;
   box-shadow: var(--box-shadow);
   background-color: var(--light-accent);
+  border-radius: 6px;
   @include media("<tablet") {
     height: 100%;
     grid-column: 1 / -1;
