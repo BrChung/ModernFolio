@@ -80,21 +80,20 @@ body {
 
 :root {
   //Color Pallete
-  --light-shade0: #cecece;
-  --light: #eee8eb;
-  --light-op: #eee8ebd0;
-  --light-shade1: #dfdfdf;
-  --light-shade2: #f4f0f2;
-  --light-accent0: #bea6b2;
-  --light-accent: #63acc1;
-  --main: #284b63;
-  --main-shade1: #304d63;
-  --dark-accent: #728187;
-  --dark-shade0: #34363f;
-  --dark-shade1: #25262d;
-  --dark: #1a1b20;
-  --dark-op: #1a1b20d0;
-  --dark-shade2: #151618;
+  --light-shade0: #d2d6da;
+  --light: #e9ebed;
+  --light-op: #f4f5f6d0;
+  --light-shade1: #dde0e3;
+  --light-shade2: #f4f5f6;
+  --accent: #276eb9;
+  --main-shade0: #9aa4ac;
+  --main: #788591;
+  --main-shade1: #64717d;
+  --dark-shade0: #2e3338;
+  --dark-shade1: #25292d;
+  --dark: #1c1f22;
+  --dark-op: #1c1f22d0;
+  --dark-shade2: #121416;
   --nav-size: 60px;
   --border-radius: 6px;
   --speed: 500ms;
@@ -102,6 +101,7 @@ body {
   --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   --box-shadow-low: 0 2px 6px 0 rgba(0, 0, 0, 0.2),
     0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  --inner-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .light {
@@ -110,13 +110,13 @@ body {
   --bg-accent2: var(--light-shade1);
   --bg-op: var(--light-op);
   --hover: var(--light-shade0);
-  --hover-accent: var(--light-shade2);
+  --hover-accent: var(--light-shade1);
   --text-color: var(--dark);
-  --text-accent: var(--main-shade1);
+  --text-accent: var(--accent);
   --text-light: var(--dark-shade0);
   --border-color: var(--light-shade0);
   --card-color: var(--light-shade2);
-  --card-inverse-color: var(--dark-shade0);
+  --card-inverse-color: var(--light-shade1);
   --brightness-filter: brightness(0.9);
   --brightness-inverse-filter: brightness(1.1);
 }
@@ -129,11 +129,11 @@ body {
   --hover: var(--dark-shade1);
   --hover-accent: var(--dark-shade0);
   --text-color: var(--light);
-  --text-accent: var(--light-accent0);
+  --text-accent: var(--accent);
   --text-light: var(--light-shade0);
   --border-color: var(--dark-shade1);
   --card-color: var(--dark-shade1);
-  --card-inverse-color: var(--light-shade2);
+  --card-inverse-color: var(--dark-shade2);
   --brightness-filter: brightness(1.1);
   --brightness-inverse-filter: brightness(0.9);
 }

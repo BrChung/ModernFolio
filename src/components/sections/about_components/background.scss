@@ -4,11 +4,8 @@
   position: relative;
   margin-top: 30px;
   border-radius: 6px;
-  background-color: var(--card-inverse-color);
+  background-color: var(--card-color);
   box-shadow: var(--box-shadow);
-  p {
-    color: var(--bg);
-  }
 }
 
 .background-content-container {

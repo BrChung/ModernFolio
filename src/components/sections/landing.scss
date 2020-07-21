@@ -7,7 +7,6 @@
 
 .landing-introduction {
   font-size: 16px;
-  color: var(--text-accent);
   @include media(">tablet") {
     @include background-overlay;
   }

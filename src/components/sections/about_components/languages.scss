@@ -12,9 +12,9 @@
   display: inline-block;
   position: relative;
   border-radius: 6px;
-  background-color: var(--card-color);
+  background-color: var(--card-inverse-color);
   padding: 15px 30px;
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--inner-shadow);
   svg {
     fill: var(--text-color);
     height: 24px;

@@ -65,10 +65,6 @@ const Layout = ({ children }) => {
               Developed and Designed by Brian Chung
             </a>
           </p>
-          <p>
-            Inspired by{" "}
-            <a href="https://brittanychiang.com/">Brittany Chiang</a>
-          </p>
           <small>
             Copyright © {new Date().getFullYear()} Brian Chung. All Rights
             Reserved.

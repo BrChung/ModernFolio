@@ -132,7 +132,7 @@
   position: relative;
   z-index: 1;
   box-shadow: var(--box-shadow);
-  background-color: var(--light-accent);
+  background-color: var(--main-shade0);
   border-radius: 6px;
   @include media("<tablet") {
     height: 100%;
@@ -191,7 +191,7 @@
 .project-code-button {
   display: flex;
   justify-content: center;
-  background-color: var(--dark-accent);
+  background-color: var(--main-shade1);
   color: white;
   padding: 12px 20px;
   border: none;

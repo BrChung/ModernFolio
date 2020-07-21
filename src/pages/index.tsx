@@ -10,9 +10,9 @@ import Experience from "../components/sections/experience"
 import Projects from "../components/sections/projects"
 import Contact from "../components/sections/contact"
 
-const IndexPage = ({ location, data }) => (
+const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Software Engineer" />
     <Landing data={data.landing.edges} />
     <About
       about={data.about.edges}
