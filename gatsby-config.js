@@ -1,8 +1,12 @@
 module.exports = {
   siteMetadata: {
     title: `Brian Chung`,
-    description: `Brian Chung is a software engineer based in Los Angeles, CA who enjoys creating new things.`,
+    description: `I am a software engineer based in Los Angeles, CA, specializing in building full-stack cloud-based solutions.`,
     author: `@briankhchung`,
+    siteUrl: `https://brianchung.netlify.app`,
+    keywords: `Brian Chung, Brian, Chung, briankhchung, software engineer, full-stack engineer, software developer, javascript, python`,
+    siteLang: `en_US`,
+    image: "/images/og.png",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -32,13 +36,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Brian Chung | Software Engineer`,
+        short_name: `Brian Chung`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/logo.png`, // This path is relative to the root of the site.
       },
     },
     {
