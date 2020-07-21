@@ -43,6 +43,8 @@ module.exports = {
         theme_color: `#ffffff`,
         display: `standalone`,
         icon: `src/images/logo.png`, // This path is relative to the root of the site.
+        legacy: false,
+        include_favicon: false,
       },
     },
     {
