@@ -32,19 +32,20 @@
 }
 
 .landing-position {
-  font-size: 62px;
+  font-size: 49px;
   line-height: 0.3;
   color: var(--text-light);
+  font-weight: 600;
   @include media(">tablet", "<=desktop") {
     @include background-overlay;
     font-size: 42px;
   }
   @include media(">phone", "<=tablet") {
     @include background-overlay;
-    font-size: 36px;
+    font-size: 38px;
   }
   @include media("<=phone") {
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 

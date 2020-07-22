@@ -71,8 +71,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text-color);
-  font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui,
-    BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   @extend .light; //No javascript => light mode
@@ -113,7 +112,7 @@ body {
   --hover-accent: var(--light-shade1);
   --text-color: var(--dark);
   --text-accent: var(--accent);
-  --text-light: var(--dark-shade0);
+  --text-light: var(--main-shade1);
   --border-color: var(--light-shade0);
   --card-color: var(--light-shade2);
   --card-inverse-color: var(--light-shade1);
@@ -130,7 +129,7 @@ body {
   --hover-accent: var(--dark-shade0);
   --text-color: var(--light);
   --text-accent: var(--accent);
-  --text-light: var(--light-shade0);
+  --text-light: var(--main-shade0);
   --border-color: var(--dark-shade1);
   --card-color: var(--dark-shade1);
   --card-inverse-color: var(--dark-shade2);

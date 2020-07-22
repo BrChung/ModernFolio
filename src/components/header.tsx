@@ -193,7 +193,13 @@ const DropdownMenu = () => {
         onEnter={calcHeight}
       >
         <div className="menu">
-          <DropdownItem leftIcon={<PictureAsPDFIcon />}>Resume</DropdownItem>
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+          >
+            <DropdownItem leftIcon={<PictureAsPDFIcon />}>Resume</DropdownItem>
+          </a>
           <DropdownItem
             leftIcon={<UsersIcon />}
             rightIcon={<ChevronIcon />}
@@ -218,16 +224,20 @@ const DropdownMenu = () => {
           <DropdownTitle leftIcon={<ArrowLeftIcon />} goToMenu="main">
             Social Media
           </DropdownTitle>
-          <a href={github}>
+          <a href={github} target="_blank" rel="nofollow noopener noreferrer">
             <DropdownItem leftIcon={<GitHubIcon />}> GitHub</DropdownItem>
           </a>
-          <a href={linkedin}>
+          <a href={linkedin} target="_blank" rel="nofollow noopener noreferrer">
             <DropdownItem leftIcon={<LinkedInIcon />}>LinkedIn</DropdownItem>
           </a>
-          <a href={instagram}>
+          <a
+            href={instagram}
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+          >
             <DropdownItem leftIcon={<InstagramIcon />}>Instagram</DropdownItem>
           </a>
-          <a href={twitter}>
+          <a href={twitter} target="_blank" rel="nofollow noopener noreferrer">
             <DropdownItem leftIcon={<TwitterIcon />}>Twitter</DropdownItem>
           </a>
         </div>

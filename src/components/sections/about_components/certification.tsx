@@ -32,7 +32,11 @@ const About_Certification = ({ data }) => (
                 />
                 <div className="certification-certificate-content">
                   <h5 className="certification-certificate-name">
-                    <a href={credential_url}>
+                    <a
+                      href={credential_url}
+                      target="_blank"
+                      rel="nofollow noopener noreferrer"
+                    >
                       <span>{title}</span>
                     </a>
                   </h5>
