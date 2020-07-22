@@ -28,6 +28,7 @@
       text-align: right;
       @include media("<tablet") {
         grid-column: 1 / -1;
+        text-align: left;
         padding: 40px 40px 30px;
       }
     }
@@ -37,11 +38,18 @@
       li {
         margin-right: 0;
       }
+      @include media("<tablet") {
+        justify-content: flex-start;
+      }
     }
     .project-link-container {
       justify-content: flex-end;
       margin-left: 0;
       margin-right: -10px;
+      @include media("<tablet") {
+        margin: 0;
+        justify-content: space-between;
+      }
     }
     .project-image-container {
       grid-column: 1 / 8;
@@ -123,6 +131,10 @@
       width: 22px;
       height: 22px;
     }
+  }
+  @include media("<tablet") {
+    margin: 0;
+    justify-content: space-between;
   }
 }
 

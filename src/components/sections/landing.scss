@@ -18,6 +18,7 @@
 .landing-title {
   font-size: 82px;
   line-height: 0.7;
+  white-space: nowrap;
   @include media(">tablet", "<=desktop") {
     @include background-overlay;
     font-size: 64px;
@@ -34,6 +35,7 @@
 .landing-position {
   font-size: 49px;
   line-height: 0.3;
+  white-space: nowrap;
   color: var(--text-light);
   font-weight: 600;
   @include media(">tablet", "<=desktop") {
