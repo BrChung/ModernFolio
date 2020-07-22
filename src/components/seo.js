@@ -130,8 +130,10 @@ function SEO({ description, lang, meta, title }) {
       ].concat(meta)}
       link={[
         {
-          rel: `stylesheet`,
+          rel: `preload`,
           href: `https://fonts.googleapis.com/css2?family=Roboto&display=swap`,
+          as: `style`,
+          onload: `this.onload=null; this.rel='stylesheet'; document.body.classList.add('fontLoaded')`,
         },
         {
           rel: `apple-touch-icon`,

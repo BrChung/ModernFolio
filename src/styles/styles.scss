@@ -71,7 +71,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text-color);
-  font-family: "Roboto", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   @extend .dark; //No javascript => dark mode
@@ -135,6 +135,10 @@ body {
   --card-inverse-color: var(--dark-shade2);
   --brightness-filter: brightness(1.1);
   --brightness-inverse-filter: brightness(0.9);
+}
+
+.fontLoaded {
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 code {
