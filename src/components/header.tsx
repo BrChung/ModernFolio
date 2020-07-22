@@ -22,7 +22,7 @@ const Header = ({ siteTitle }) => (
           <Link to="/">{siteTitle}</Link>
         </h1>
       </div>
-      <div className="nav-elm-right-container">
+      <ul className="nav-elm-right-container">
         <li>
           <Link to="/#about">About</Link>
         </li>
@@ -38,14 +38,14 @@ const Header = ({ siteTitle }) => (
         <NavItem icon={<CaretIcon />}>
           <DropdownMenu></DropdownMenu>
         </NavItem>
-      </div>
+      </ul>
     </Navbar>
   </header>
 )
 
 const Navbar = ({ children }) => (
   <nav id="navbar">
-    <ul className="navbar-elm"> {children}</ul>
+    <div className="navbar-elm"> {children}</div>
   </nav>
 )
 
@@ -68,16 +68,17 @@ const NavItem = ({ icon, children }) => {
   }
 
   return (
-    <div className="nav-item" ref={NavItemRef}>
+    <li className="nav-item" ref={NavItemRef}>
       <button
         className={open ? "icon-button-active" : "icon-button"}
         onClick={() => setOpen(!open)}
+        aria-label="Dropdown Menu"
       >
         {icon}
       </button>
 
       {open && children}
-    </div>
+    </li>
   )
 }
 

@@ -84,7 +84,9 @@ body {
   --light-op: #f4f5f6d0;
   --light-shade1: #dde0e3;
   --light-shade2: #f4f5f6;
+  --accent-light: #3582d4;
   --accent: #276eb9;
+  --accent-dark: #205a97;
   --main-shade0: #9aa4ac;
   --main: #788591;
   --main-shade1: #64717d;
@@ -111,7 +113,7 @@ body {
   --hover: var(--light-shade0);
   --hover-accent: var(--light-shade1);
   --text-color: var(--dark);
-  --text-accent: var(--accent);
+  --text-accent: var(--accent-dark);
   --text-light: var(--main-shade1);
   --border-color: var(--light-shade0);
   --card-color: var(--light-shade2);
@@ -128,7 +130,7 @@ body {
   --hover: var(--dark-shade1);
   --hover-accent: var(--dark-shade0);
   --text-color: var(--light);
-  --text-accent: var(--accent);
+  --text-accent: var(--accent-light);
   --text-light: var(--main-shade0);
   --border-color: var(--dark-shade1);
   --card-color: var(--dark-shade1);

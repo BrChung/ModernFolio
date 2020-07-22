@@ -33,16 +33,36 @@ const SocialMedia = () => {
   } = data.allMarkdownRemark.edges[0].node.frontmatter
   return (
     <div className="social-media-container">
-      <a href={github} target="_blank" rel="nofollow noopener noreferrer">
+      <a
+        href={github}
+        target="_blank"
+        rel="nofollow noopener noreferrer"
+        aria-label="Github Link"
+      >
         <GitHubIcon />
       </a>
-      <a href={linkedin} target="_blank" rel="nofollow noopener noreferrer">
+      <a
+        href={linkedin}
+        target="_blank"
+        rel="nofollow noopener noreferrer"
+        aria-label="LinkedIn Link"
+      >
         <LinkedInIcon />
       </a>
-      <a href={instagram} target="_blank" rel="nofollow noopener noreferrer">
+      <a
+        href={instagram}
+        target="_blank"
+        rel="nofollow noopener noreferrer"
+        aria-label="Instagram Link"
+      >
         <InstagramIcon />
       </a>
-      <a href={twitter} target="_blank" rel="nofollow noopener noreferrer">
+      <a
+        href={twitter}
+        target="_blank"
+        rel="nofollow noopener noreferrer"
+        aria-label="Twitter Link"
+      >
         <TwitterIcon />
       </a>
     </div>

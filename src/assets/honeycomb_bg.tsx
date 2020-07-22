@@ -29,7 +29,7 @@ const HoneycombBG = () => {
       y="0px"
       viewBox="0 0 775 501"
     >
-      <g id="CenterRight">
+      <g id="HoneyComb-st0-CenterRight">
         <polygon
           className="st0"
           points="445.12,107.93 445.06,107.96 445.06,135.96 469.31,149.96 493.3,136.11 493.3,108.13 493.56,107.99 
@@ -85,11 +85,11 @@ const HoneycombBG = () => {
         />
       </g>
       <polygon
-        id="Lone"
+        id="HoneyComb-st0-Lone"
         className="st0"
         points="300.14,275.34 300.14,303.34 324.39,317.34 348.64,303.34 348.64,275.34 324.39,261.34 "
       />
-      <g id="CenterLeft">
+      <g id="HoneyComb-st0-CenterLeft">
         <polygon
           className="st0"
           points="373.89,95.59 373.89,67.88 349.64,53.88 325.39,67.88 325.39,95.88 349.64,109.88 349.82,109.78 
@@ -130,7 +130,7 @@ const HoneycombBG = () => {
             252.59,25.61 252.59,25.71 252.89,25.88 	"
         />
       </g>
-      <g id="Left">
+      <g id="HoneyComb-st0-Left">
         <polygon
           className="st0"
           points="60.14,24.64 36.19,10.81 11.94,24.81 11.94,52.81 36.19,66.81 60.44,52.81 60.44,52.71 60.14,52.54 	
@@ -142,7 +142,7 @@ const HoneycombBG = () => {
                 "
         />
       </g>
-      <g id="Right">
+      <g id="HoneyComb-st0-Right">
         <polygon
           className="st0"
           points="614.18,150.89 614.18,150.6 638.08,136.81 637.95,136.73 637.95,108.83 614,95 589.75,109 589.75,137 
@@ -317,7 +317,7 @@ const HoneycombBG = () => {
             711.57,403.8 	"
         />
       </g>
-      <g id="CenterRight">
+      <g id="HoneyComb-st1-CenterRight">
         <polygon
           className="st1"
           points="445.12,107.93 445.06,107.96 445.06,135.96 469.31,149.96 493.3,136.11 493.3,108.13 493.56,107.99 
@@ -373,11 +373,11 @@ const HoneycombBG = () => {
         />
       </g>
       <polygon
-        id="Lone"
+        id="HoneyComb-st1-Lone"
         className="st1"
         points="300.14,275.34 300.14,303.34 324.39,317.34 348.64,303.34 348.64,275.34 324.39,261.34 "
       />
-      <g id="CenterLeft">
+      <g id="HoneyComb-st1-CenterLeft">
         <polygon
           className="st1"
           points="373.89,95.59 373.89,67.88 349.64,53.88 325.39,67.88 325.39,95.88 349.64,109.88 349.82,109.78 
@@ -418,7 +418,7 @@ const HoneycombBG = () => {
 		252.59,25.61 252.59,25.71 252.89,25.88 	"
         />
       </g>
-      <g id="Left">
+      <g id="HoneyComb-st1-Left">
         <polygon
           className="st1"
           points="60.14,24.64 36.19,10.81 11.94,24.81 11.94,52.81 36.19,66.81 60.44,52.81 60.44,52.71 60.14,52.54 	
@@ -430,7 +430,7 @@ const HoneycombBG = () => {
 			"
         />
       </g>
-      <g id="Right">
+      <g id="HoneyComb-st1-Right">
         <polygon
           className="st1"
           points="614.18,150.89 614.18,150.6 638.08,136.81 637.95,136.73 637.95,108.83 614,95 589.75,109 589.75,137 

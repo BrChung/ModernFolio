@@ -49,7 +49,7 @@ const Experience = ({ data }) => {
       <div className="experience-container">
         <h3 className="experience-container-title">My Experience</h3>
         <div className="experience-tab-container">
-          <ul
+          <div
             className="experience-tab-list"
             role="tablist"
             aria-label="Job tabs"
@@ -59,7 +59,7 @@ const Experience = ({ data }) => {
               data.map(({ node }, i) => {
                 const { company } = node.frontmatter
                 return (
-                  <li key={i}>
+                  <div key={i}>
                     <button
                       className="experience-tab-list-button"
                       style={
@@ -77,7 +77,7 @@ const Experience = ({ data }) => {
                     >
                       <span>{company}</span>
                     </button>
-                  </li>
+                  </div>
                 )
               })}
             {windowWidth < 768 && (
@@ -92,7 +92,7 @@ const Experience = ({ data }) => {
                 style={{ transform: `translateY(${activeExpId * 30}px)` }}
               />
             )}
-          </ul>
+          </div>
           {data &&
             data.map(({ node }, i) => {
               const { frontmatter, html } = node
