@@ -1,6 +1,6 @@
 ---
 title: "about"
-profile_image: "./profile_image.jpg"
+profile_image: "./profile_image.webp"
 ---
 
 Hello! My name is Brian Chung, and I’m currently an undergraduate studying Computer Science. I love collaborating with others to discover solutions to difficult problems. I firmly believe that success doesn’t become a reality through only dreams; it takes persistence, dedication, and hard work.
