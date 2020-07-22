@@ -74,7 +74,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  @extend .light; //No javascript => light mode
+  @extend .dark; //No javascript => dark mode
 }
 
 :root {
