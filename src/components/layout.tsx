@@ -48,9 +48,9 @@ const Layout = ({ children }) => {
   useEffect(() => {
     window.addEventListener("keydown", handleFirstTab)
     const body = document.body
-    localStorage.getItem("darkMode") === "false"
-      ? body.classList.add("light")
-      : body.classList.add("dark")
+    localStorage.getItem("darkMode") === "true"
+      ? body.classList.add("dark")
+      : body.classList.add("light")
   })
 
   return (

@@ -137,7 +137,7 @@ const DropdownMenu = () => {
 
   const DropdownItemDarkMode = ({ leftIcon = undefined, children }) => {
     const [isChecked, setIsChecked] = useState(
-      localStorage.getItem("darkMode") === "false" ? false : true
+      localStorage.getItem("darkMode") === "true" ? true : false
     )
 
     return (

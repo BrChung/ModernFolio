@@ -74,7 +74,7 @@ body {
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  @extend .dark; //No javascript => dark mode
+  @extend .light; //No javascript => light mode
 }
 
 :root {
