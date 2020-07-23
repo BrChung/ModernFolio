@@ -39,6 +39,7 @@ const Contact = ({ data }) => {
         body: new URLSearchParams(formData).toString(),
       }).then(res => {
         if (res) {
+          console.log(res)
           showSnackbar()
           formRef.current.reset()
           setNameError(null)
