@@ -5,7 +5,7 @@
   flex-direction: row;
   min-height: 90vh;
   width: 100%;
-  @include media("<tablet") {
+  @include media('<tablet') {
     align-items: flex-start;
     margin-top: 54px;
   }
@@ -26,7 +26,7 @@
   align-items: flex-start;
   position: relative;
   flex-direction: column;
-  @include media("<tablet") {
+  @include media('<tablet') {
     align-items: center;
   }
   input,
@@ -47,7 +47,7 @@
     padding: 12px 0 12px 0;
     display: inline-block;
     width: 400px;
-    @include media("<tablet") {
+    @include media('<tablet') {
       width: calc(100% - 24px);
     }
   }
@@ -56,7 +56,7 @@
 .contact-text-content {
   width: 400px;
   color: var(--text-light);
-  @include media("<tablet") {
+  @include media('<tablet') {
     width: 100%;
   }
 }
@@ -73,7 +73,7 @@
   margin-right: -24px;
   box-shadow: var(--box-shadow-low);
   transition: all 100ms;
-  @include media("<tablet") {
+  @include media('<tablet') {
     width: 100%;
     margin-right: 0;
   }
@@ -116,6 +116,30 @@
 
 /* Show the snackbar when clicking on a button (class added with JavaScript) */
 #snackbar.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 4.5s;
+  animation: fadein 0.5s, fadeout 0.5s 4.5s;
+}
+
+#snackbar-error {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  width: 300px;
+  margin-left: -158px; /* Divide value of min-width + padding by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  left: 50%;
+  z-index: 1; /* Add a z-index if needed */
+  bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar-error.show {
   visibility: visible; /* Show the snackbar */
   /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
   However, delay the fade out process for 2.5 seconds */

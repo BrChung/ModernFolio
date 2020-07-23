@@ -15,6 +15,7 @@ const Contact = ({ data }) => {
   )
   const formRef = useRef(null)
   const snackbarRef = useRef(null)
+  const snackbarRefError = useRef(null)
   const [errors, setErrors] = useState({ name: '', email: '', message: '' })
   const [nameError, setNameError] = useState(null)
   const [emailError, setEmailError] = useState(null)
@@ -38,13 +39,14 @@ const Contact = ({ data }) => {
         },
         body: new URLSearchParams(formData).toString(),
       }).then(res => {
-        if (res) {
-          console.log(res)
+        if (res.status === 200) {
           showSnackbar()
           formRef.current.reset()
           setNameError(null)
           setEmailError(null)
           setMessageError(null)
+        } else {
+          showSnackbarError()
         }
       })
     })
@@ -59,6 +61,18 @@ const Contact = ({ data }) => {
     // After 5 seconds, remove the show class from DIV
     setTimeout(function () {
       snackbarRef.current.className = snackbarRef.current.className.replace(
+        'show',
+        ''
+      )
+    }, 5000)
+  }
+
+  const showSnackbarError = () => {
+    snackbarRefError.current.className = 'show'
+
+    // After 5 seconds, remove the show class from DIV
+    setTimeout(function () {
+      snackbarRefError.current.className = snackbarRefError.current.className.replace(
         'show',
         ''
       )
@@ -181,6 +195,9 @@ const Contact = ({ data }) => {
       </div>
       <div id="snackbar" ref={snackbarRef}>
         {snackbar_message}
+      </div>
+      <div id="snackbar-error" ref={snackbarRefError}>
+        Error! Could not send message!
       </div>
     </section>
   )
