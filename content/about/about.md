@@ -1,6 +1,6 @@
 ---
 title: "about"
-profile_image: "./profile_image.webp"
+profile_image: "./profile_image.jpg"
 ---
 
 Hello! My name is Brian Chung, and I'm currently a senior at California State University, Fullerton, studying Computer Science. I am eagerly seeking Software Engineering opportunities to start my career path.

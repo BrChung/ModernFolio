@@ -1,6 +1,6 @@
 ---
 title: "interests"
-cover_image: "./DSC00946.webp"
+cover_image: "./rsz_dsc00946.jpg"
 cover_image_alt: "Photograph of Golden Gate Bridge, San Francisco"
 cover_image_caption: "Photograph of Golden Gate Bridge, San Francisco, on Baker Beach"
 ---
