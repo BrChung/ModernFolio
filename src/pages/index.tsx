@@ -1,14 +1,14 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from 'react'
+import { graphql } from 'gatsby'
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from '../components/layout'
+import SEO from '../components/seo'
 
-import Landing from "../components/sections/landing"
-import About from "../components/sections/about"
-import Experience from "../components/sections/experience"
-import Projects from "../components/sections/projects"
-import Contact from "../components/sections/contact"
+import Landing from '../components/sections/landing'
+import About from '../components/sections/about'
+import Experience from '../components/sections/experience'
+import Projects from '../components/sections/projects'
+import Contact from '../components/sections/contact'
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -215,6 +215,7 @@ export const pageQuery = graphql`
             message_placeholder
             submit_button_text
             snackbar_message
+            error_message
           }
           html
         }

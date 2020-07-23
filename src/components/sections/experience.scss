@@ -5,7 +5,7 @@
   flex-direction: row;
   min-height: 100vh;
   width: 100%;
-  @include media("<tablet") {
+  @include media('<tablet') {
     align-items: flex-start;
     margin-top: 54px;
   }
@@ -14,7 +14,7 @@
 .experience-container {
   position: relative;
   max-width: 700px;
-  @include media("<tablet") {
+  @include media('<tablet') {
     max-width: 100%;
   }
 }
@@ -29,7 +29,7 @@
   display: flex;
   align-items: flex-start;
   position: relative;
-  @include media("<tablet") {
+  @include media('<tablet') {
     display: block;
   }
 }
@@ -42,7 +42,7 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  @include media("<tablet") {
+  @include media('<tablet') {
     display: flex;
     margin-bottom: 30px;
     width: calc(100% + 48px);
@@ -79,7 +79,7 @@
   &:focus {
     background-color: var(--hover) !important;
   }
-  @include media("<tablet") {
+  @include media('<tablet') {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,7 +102,7 @@
   right: 0;
   transition: transform 0.25s ease-in-out;
   z-index: 10;
-  @include media("<tablet") {
+  @include media('<tablet') {
     width: 100%;
     max-width: 120px;
     height: 2px;
@@ -123,18 +123,18 @@
   box-shadow: var(--box-shadow);
   transition: height var(--speed);
   @include styled-link-title;
-  @include media(">=tablet") {
+  @include media('>=tablet') {
     -ms-overflow-style: none; /* Internet Explorer 10+ */
     scrollbar-width: none; /* Firefox */
   }
-  @include media("<tablet") {
+  @include media('<tablet') {
     margin: 0;
     padding: 30px 24px;
   }
 }
 
 .experience-tab-content-container::-webkit-scrollbar {
-  @include media(">=tablet") {
+  @include media('>=tablet') {
     display: none;
   }
 }
@@ -171,7 +171,7 @@
       padding-left: 30px;
       padding-bottom: 10px;
       &:before {
-        content: "▶\FE0E";
+        content: '▸';
         position: absolute;
         left: 0;
         color: var(--text-accent);

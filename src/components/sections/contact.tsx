@@ -9,6 +9,7 @@ const Contact = ({ data }) => {
     submit_button_text,
     title,
     snackbar_message,
+    error_message,
   } = frontmatter
   const validEmailRegex = RegExp(
     /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
@@ -185,7 +186,7 @@ const Contact = ({ data }) => {
         {snackbar_message}
       </div>
       <div id="snackbar-error" ref={snackbarRefError}>
-        Error! Could not send message!
+        {error_message}
       </div>
     </section>
   )
