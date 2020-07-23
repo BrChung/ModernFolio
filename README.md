@@ -57,12 +57,12 @@
 
 Various shades of these colors were used in the website. The colors can be changed by altering the CSS variables in `/src/styles/styles.scss`.
 
-| Base Colors  | Hex                                                                |
-| ------------ | ------------------------------------------------------------------ |
-| Cultured     | ![#F4F5F6](https://via.placeholder.com/10/0a192f?text=+) `#F4F5F6` |
-| Persian Red  | ![#C52B2F](https://via.placeholder.com/10/0a192f?text=+) `#C52B2F` |
-| Spanish Blue | ![#276EB9](https://via.placeholder.com/10/0a192f?text=+) `#276EB9` |
-| Eerie Black  | ![#1C1F22](https://via.placeholder.com/10/303C55?text=+) `#1C1F22` |
+| Base Colors  | Hex     |
+| ------------ | ------- |
+| Cultured     | #F4F5F6 |
+| Persian Red  | #C52B2F |
+| Spanish Blue | #276EB9 |
+| Eerie Black  | #1C1F22 |
 
 ## 🧐 What's inside?
 
