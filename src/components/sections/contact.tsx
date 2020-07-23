@@ -20,12 +20,6 @@ const Contact = ({ data }) => {
   const [nameError, setNameError] = useState(null)
   const [emailError, setEmailError] = useState(null)
   const [messageError, setMessageError] = useState(null)
-  const [formDisabled, setFormDisabled] = useState(false)
-
-  const isInStandaloneMode = () =>
-    window.matchMedia('(display-mode: standalone)').matches ||
-    window.navigator['standalone'] ||
-    document.referrer.includes('android-app://')
 
   useEffect(() => {
     formRef.current.addEventListener('submit', event => {
@@ -50,9 +44,6 @@ const Contact = ({ data }) => {
         }
       })
     })
-    if (isInStandaloneMode()) {
-      setFormDisabled(true)
-    }
   }, [])
 
   const showSnackbar = () => {
@@ -136,7 +127,6 @@ const Contact = ({ data }) => {
                   type="text"
                   name="name"
                   onChange={formHandler}
-                  disabled={formDisabled}
                 />
               </label>
             </div>
@@ -153,7 +143,6 @@ const Contact = ({ data }) => {
                   type="email"
                   name="email"
                   onChange={formHandler}
-                  disabled={formDisabled}
                 />
               </label>
             </div>
@@ -170,7 +159,6 @@ const Contact = ({ data }) => {
                   name="message"
                   placeholder={message_placeholder}
                   onChange={formHandler}
-                  disabled={formDisabled}
                 ></textarea>
               </label>
             </div>
