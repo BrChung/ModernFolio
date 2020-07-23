@@ -9,9 +9,6 @@
 <p align="center">
   My personal website <a href="https://brianchung.co" target="_blank">brianchung.co</a> powered by <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a>
 </p>
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/410b2f49-c8c4-470c-a95c-1bf21708429d/deploy-status)](https://app.netlify.com/sites/brianchung/deploys)
-
 <p align="center">
   <a href="https://app.netlify.com/sites/brianchung/deploys" target="_blank">
     <img src="https://api.netlify.com/api/v1/badges/410b2f49-c8c4-470c-a95c-1bf21708429d/deploy-status" alt="Netlify Status" />
