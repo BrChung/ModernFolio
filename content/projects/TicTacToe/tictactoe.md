@@ -13,4 +13,4 @@ technologies:
   - Nebular
 ---
 
-Give it a try, play Tic-Tac-Toe in real-time with friends on a single device or across the world on any internet connected device! Game state is saved online and login is simple with Google Sign-in.
+Play Tic-Tac-Toe in real-time with friends on a single device or across the world on any internet-connected device, give it a try! The game saves state online, and login is convenient with Google Sign-in.

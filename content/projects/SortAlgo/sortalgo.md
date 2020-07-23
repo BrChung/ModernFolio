@@ -10,4 +10,4 @@ technologies:
   - Material UI
 ---
 
-A web app to visualize Merge Sort, Quick Sort, Heap Sort, Selection Sort, Insertion Sort, and Bubble Sort algorithms. A nice way to compare sorting algorithms and how they handle random and reversed data.
+A web app to visualize Merge Sort, Quick Sort, Heap Sort, Selection Sort, Insertion Sort, and Bubble Sort algorithms. An excellent way to compare sorting algorithms and how they handle random and reversed data.

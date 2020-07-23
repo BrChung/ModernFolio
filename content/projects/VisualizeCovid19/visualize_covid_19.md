@@ -14,4 +14,4 @@ technologies:
   - Material UI
 ---
 
-A web app for visualizing Coronavirus growth over time in various locations around the world. Travel backwards in time and play an animation to see the gradual spread of the virus. Search and filter locations to track total confirmed, deaths, recovered, and active cases.
+An application for visualizing Coronavirus growth over time in various locations around the world. Travel backward in time and play an animation to see the gradual spread of the virus. Search and filter sites to track total confirmed, deaths, recovered, and active cases.

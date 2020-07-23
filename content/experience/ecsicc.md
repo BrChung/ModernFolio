@@ -7,7 +7,7 @@ url: "https://asi.fullerton.edu/"
 ---
 
 - Hosted Night with Industry, an on-campus networking event, recognized at Tuffy Awards 2020 as Outstanding Program in Academia
-- Faciliated discussions on the allocation of budget for all engineering and computer science organizations and projects
+- Facilitated discussions on the allocation of budget for engineering and computer science organizations and projects
 
 <br>
 
@@ -28,4 +28,4 @@ url: "https://asi.fullerton.edu/"
 </h5>
 
 - Managed and allocated an annual budget of over \$60,000 to fund student projects and events
-- Created and implemented a new automatically check request system to expedite the reimbursement process
+- Created and implemented an automatic check-request system to expedite the reimbursement process
