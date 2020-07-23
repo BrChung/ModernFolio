@@ -5,17 +5,17 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { useEffect } from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-import Header from "./header"
-import "./layout.scss"
-import SocialMedia from "./social_media"
+import React, { useEffect } from 'react'
+import PropTypes from 'prop-types'
+import { useStaticQuery, graphql } from 'gatsby'
+import Header from './header'
+import './layout.scss'
+import SocialMedia from './social_media'
 
 //https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558
-if (typeof window !== "undefined") {
+if (typeof window !== 'undefined') {
   // eslint-disable-next-line global-require
-  require("smooth-scroll")('a[href*="#"]', { header: "#navbar" })
+  require('smooth-scroll')('a[href*="#"]', { header: '#navbar' })
 }
 
 const Layout = ({ children }) => {
@@ -31,26 +31,26 @@ const Layout = ({ children }) => {
 
   const handleFirstTab = event => {
     if (event.keyCode === 9) {
-      const htmlElement = document.querySelector("html")
-      htmlElement.classList.add("user-is-tabbing")
-      window.removeEventListener("keydown", handleFirstTab)
-      window.addEventListener("mousedown", handleMouseDownOnce)
+      const htmlElement = document.querySelector('html')
+      htmlElement.classList.add('user-is-tabbing')
+      window.removeEventListener('keydown', handleFirstTab)
+      window.addEventListener('mousedown', handleMouseDownOnce)
     }
   }
 
   const handleMouseDownOnce = () => {
-    const htmlElement = document.querySelector("html")
-    htmlElement.classList.remove("user-is-tabbing")
-    window.removeEventListener("mousedown", handleMouseDownOnce)
-    window.addEventListener("keydown", handleFirstTab)
+    const htmlElement = document.querySelector('html')
+    htmlElement.classList.remove('user-is-tabbing')
+    window.removeEventListener('mousedown', handleMouseDownOnce)
+    window.addEventListener('keydown', handleFirstTab)
   }
 
   useEffect(() => {
-    window.addEventListener("keydown", handleFirstTab)
+    window.addEventListener('keydown', handleFirstTab)
     const body = document.body
-    localStorage.getItem("darkMode") === "false"
-      ? body.classList.add("light")
-      : body.classList.add("dark")
+    localStorage.getItem('darkMode') === 'false'
+      ? body.classList.add('light')
+      : body.classList.add('dark')
   })
 
   return (
@@ -61,7 +61,7 @@ const Layout = ({ children }) => {
         <footer className="footer-container">
           <SocialMedia />
           <p>
-            <a href="https://github.com/BrChung/personal-website">
+            <a href="https://github.com/BrChung/ModernFolio">
               Developed and Designed by Brian Chung
             </a>
           </p>

@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://brianchung.co">
-    <img alt="Brian Chung" src="https://github.com/BrChung/personal-website/blob/master/src/images/logo.png?raw=true" width="60" />
+    <img alt="Brian Chung" src="https://github.com/BrChung/ModernFolio/blob/master/src/images/logo.png?raw=true" width="60" />
   </a>
 </div>
 <h1 align="center">
@@ -12,7 +12,13 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/410b2f49-c8c4-470c-a95c-1bf21708429d/deploy-status)](https://app.netlify.com/sites/brianchung/deploys)
 
-![demo](https://github.com/BrChung/personal-website/blob/master/static/images/og.png?raw=true)
+<p align="center">
+  <a href="https://app.netlify.com/sites/brianchung/deploys" target="_blank">
+    <img src="https://api.netlify.com/api/v1/badges/410b2f49-c8c4-470c-a95c-1bf21708429d/deploy-status" alt="Netlify Status" />
+  </a>
+</p>
+
+![demo](https://github.com/BrChung/ModernFolio/blob/master/static/images/og.png?raw=true)
 
 ## 🚀 Quick start
 
