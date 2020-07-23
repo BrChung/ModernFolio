@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from "react"
-import PropTypes from "prop-types"
-import "./contact.scss"
+import React, { useEffect, useRef, useState } from 'react'
+import PropTypes from 'prop-types'
+import './contact.scss'
 
 const Contact = ({ data }) => {
   const { frontmatter, html } = data[0].node
@@ -15,20 +15,26 @@ const Contact = ({ data }) => {
   )
   const formRef = useRef(null)
   const snackbarRef = useRef(null)
-  const [errors, setErrors] = useState({ name: "", email: "", message: "" })
+  const [errors, setErrors] = useState({ name: '', email: '', message: '' })
   const [nameError, setNameError] = useState(null)
   const [emailError, setEmailError] = useState(null)
   const [messageError, setMessageError] = useState(null)
+  const [formDisabled, setFormDisabled] = useState(false)
+
+  const isInStandaloneMode = () =>
+    window.matchMedia('(display-mode: standalone)').matches ||
+    window.navigator['standalone'] ||
+    document.referrer.includes('android-app://')
 
   useEffect(() => {
-    formRef.current.addEventListener("submit", event => {
+    formRef.current.addEventListener('submit', event => {
       event.preventDefault()
       const formData = new FormData(formRef.current) as any
-      fetch(formRef.current.getAttribute("action"), {
-        method: "POST",
+      fetch(formRef.current.getAttribute('action'), {
+        method: 'POST',
         headers: {
-          Accept: "application/x-www-form-urlencoded;charset=UTF-8",
-          "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+          Accept: 'application/x-www-form-urlencoded;charset=UTF-8',
+          'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
         },
         body: new URLSearchParams(formData).toString(),
       }).then(res => {
@@ -41,16 +47,19 @@ const Contact = ({ data }) => {
         }
       })
     })
+    if (isInStandaloneMode()) {
+      setFormDisabled(true)
+    }
   }, [])
 
   const showSnackbar = () => {
-    snackbarRef.current.className = "show"
+    snackbarRef.current.className = 'show'
 
     // After 5 seconds, remove the show class from DIV
     setTimeout(function () {
       snackbarRef.current.className = snackbarRef.current.className.replace(
-        "show",
-        ""
+        'show',
+        ''
       )
     }, 5000)
   }
@@ -59,19 +68,19 @@ const Contact = ({ data }) => {
     const { name, value } = event.target
     let tempErrors = errors
     switch (name) {
-      case "name":
+      case 'name':
         tempErrors.name =
-          value.length < 5 ? "Must be at least 5 characters" : ""
+          value.length < 5 ? 'Must be at least 5 characters' : ''
         setNameError(tempErrors.name.length > 0 ? true : false)
         break
-      case "email":
+      case 'email':
         tempErrors.email = validEmailRegex.test(value)
-          ? ""
-          : "Email is not valid"
+          ? ''
+          : 'Email is not valid'
         setEmailError(tempErrors.email.length > 0 ? true : false)
         break
-      case "message":
-        tempErrors.message = value.length < 1 ? "Message must have content" : ""
+      case 'message':
+        tempErrors.message = value.length < 1 ? 'Message must have content' : ''
         setMessageError(tempErrors.message.length > 0 ? true : false)
         break
       default:
@@ -96,7 +105,7 @@ const Contact = ({ data }) => {
             data-netlify="true"
             ref={formRef}
             id="contactForm"
-            style={{ width: "100%" }}
+            style={{ width: '100%' }}
           >
             <input type="hidden" name="bot-field" />
             <div>
@@ -106,12 +115,13 @@ const Contact = ({ data }) => {
                 <input
                   style={{
                     border: nameError
-                      ? "1px solid var(--error)"
-                      : "1px solid #ccc",
+                      ? '1px solid var(--error)'
+                      : '1px solid #ccc',
                   }}
                   type="text"
                   name="name"
                   onChange={formHandler}
+                  disabled={formDisabled}
                 />
               </label>
             </div>
@@ -122,12 +132,13 @@ const Contact = ({ data }) => {
                 <input
                   style={{
                     border: emailError
-                      ? "1px solid var(--error)"
-                      : "1px solid #ccc",
+                      ? '1px solid var(--error)'
+                      : '1px solid #ccc',
                   }}
                   type="email"
                   name="email"
                   onChange={formHandler}
+                  disabled={formDisabled}
                 />
               </label>
             </div>
@@ -138,12 +149,13 @@ const Contact = ({ data }) => {
                 <textarea
                   style={{
                     border: messageError
-                      ? "1px solid var(--error)"
-                      : "1px solid #ccc",
+                      ? '1px solid var(--error)'
+                      : '1px solid #ccc',
                   }}
                   name="message"
                   placeholder={message_placeholder}
                   onChange={formHandler}
+                  disabled={formDisabled}
                 ></textarea>
               </label>
             </div>
