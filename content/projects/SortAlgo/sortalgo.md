@@ -1,10 +1,10 @@
 ---
-order: "1"
-title: "SortAlgo"
-cover_img: "sortalgo.jpeg"
-demo_gif: "https://github.com/BrChung/SortAlgo/blob/master/assets/SortAlgo%20Demo.gif?raw=true"
-github: "https://github.com/BrChung/SortAlgo"
-demo: "https://sortalgo.com/"
+order: '3'
+title: 'SortAlgo'
+cover_img: 'sortalgo.jpeg'
+demo_gif: 'https://github.com/BrChung/SortAlgo/blob/master/assets/SortAlgo%20Demo.gif?raw=true'
+github: 'https://github.com/BrChung/SortAlgo'
+demo: 'https://sortalgo.com/'
 technologies:
   - React
   - Material UI
